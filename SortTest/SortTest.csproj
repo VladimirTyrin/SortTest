@@ -9,12 +9,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SortTest</RootNamespace>
     <AssemblyName>SortTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +25,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -45,6 +46,15 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorts\AbstractSort.cs" />
+    <Compile Include="Sorts\AdaptiveParallelMergeSort.cs" />
+    <Compile Include="Sorts\BubbleSort.cs" />
+    <Compile Include="Sorts\InsertionSort.cs" />
+    <Compile Include="Sorts\ISort.cs" />
+    <Compile Include="Sorts\MergeSort.cs" />
+    <Compile Include="Sorts\SimpleParallelMergeSort.cs" />
+    <Compile Include="Sorts\TaskParallelMergeSort.cs" />
+    <Compile Include="Utils\AlgorithmRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
