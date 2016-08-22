@@ -11,22 +11,22 @@ namespace SortTest.Sorts
         #region ISort
         public override void Prepare(List<int> data)
         {
-            _data = new List<int>(data);
-            _size = data.Count;
+            Data = new List<int>(data);
+            Size = data.Count;
         }
 
         public override void Run()
         {
-            for (var i = 0; i < _size - 1; ++i)
+            for (var i = 0; i < Size - 1; ++i)
             {
                 var swapped = false;
-                for (var j = 0; j < _size - i - 1; ++j)
+                for (var j = 0; j < Size - i - 1; ++j)
                 {
-                    if (_data[j] > _data[j + 1])
+                    if (Data[j] > Data[j + 1])
                     {
-                        var tmp = _data[j];
-                        _data[j] = _data[j + 1];
-                        _data[j + 1] = tmp;
+                        var tmp = Data[j];
+                        Data[j] = Data[j + 1];
+                        Data[j + 1] = tmp;
                         swapped = true;
                     }
                 }
@@ -35,13 +35,6 @@ namespace SortTest.Sorts
                     break;
             }
         }
-        #endregion
-
-        #region private
-
-        private List<int> _data;
-        private int _size;
-
         #endregion
     }
 }
